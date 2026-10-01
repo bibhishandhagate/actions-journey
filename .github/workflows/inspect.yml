@@ -1,0 +1,13 @@
+name: checkout code
+on: push
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout the code
+        uses: actions/checkout@v4
+      - name: Print kernel details
+        run: uname -r
+      - name: file listing
+        run: ls -l
+
